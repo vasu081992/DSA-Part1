@@ -6,7 +6,7 @@ function Pattern1 (N) {
   for(i=1;i<=N;i++){
     let res=''
     for(j=1;j<=N;j++){
-      res+='*'
+       res+='*'
     }
     console.log(res)
   }
