@@ -3,11 +3,11 @@ function Pattern2 (N) {
   for(i=0;i<N;i++){
     let res='';
     for(j=0;j<=i;j++){
-     res=res+'*';
+     res=res+'* ';
     }
     console.log(res);
   }
     
 }
 
-Pattern2(3)
+Pattern2(5)
