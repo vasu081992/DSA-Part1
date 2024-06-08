@@ -2,8 +2,10 @@ function CountDigits(N){
   let count=0;
 
 while(N>0){
-  count+=1;
+
   N = Math.floor(N / 10);
+
+  count+=1;
 }
 return count
 }
