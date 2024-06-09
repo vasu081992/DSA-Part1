@@ -15,8 +15,34 @@ for(i=1;i<=Math.min(N1,N2);i++){ // here since it is greatest common factor (GCD
 
 return gcd
 
+} 
+
+console.log(GCD(12,9)) // tc = O(Min(N1,N2))
 
 
+//OPTIMIZED 
+
+function GCD2 (a,b){
+
+
+while(a>0 && b>0){
+  if(a>b){
+    a=a%b;
+  }
+  else{
+    b = b%a;
+  }
+}
+if(a===0){
+  gcd = b ; 
+}
+else{
+  gcd = a;
 }
 
-console.log(GCD(12,9))
+return gcd;
+}
+
+
+
+console.log(GCD2(113,3))  // this is optimisied approach -- known as eucledian algorithm. TC will be O(log base phi min(a,b))
