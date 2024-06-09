@@ -7,9 +7,9 @@
 
   console.log("Vasu devan");
 
-  printNames(i+1,n)
+   printNames(i+1,n)
 
 
   }
   let n=3
-  printNames(1,n)
+printNames(1,n)
