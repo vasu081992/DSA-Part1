@@ -23,7 +23,6 @@ function Pattern7 (N) {
 
   }
 
-
     console.log(res)
 
   }
