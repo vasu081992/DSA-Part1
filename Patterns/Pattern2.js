@@ -1,8 +1,8 @@
 function Pattern2 (N) {
 
-  for(i=0;i<N;i++){
+  for(i=1;i<=N;i++){
     let res='';
-    for(j=0;j<=i;j++){
+    for(j=1;j<=i;j++){
      res=res+'* ';
     }
     console.log(res);
