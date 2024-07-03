@@ -4,13 +4,17 @@ function Pattern11 (N) {
 for(i=0;i<N;i++){
 
   let res='';
+  let start=1
 
 //nums printing 
 
 
 for(j=1;j<=i+1;j++){
 
-  res=res+1
+  if(j>1){
+    start=start+1
+    }
+  res=res+start;
 
 }
 
@@ -18,7 +22,7 @@ for(j=1;j<=i+1;j++){
 for(j=0;j<N+1-(2*i);j++){
 
 
-  res=res+' '
+  res=res+' ';
 
 
 }
@@ -28,7 +32,10 @@ for(j=0;j<N+1-(2*i);j++){
 
 for(j=1;j<=i+1;j++){
 
-  res=res+1
+  res=res+start;
+  start=start-1
+
+
 
 }
 
