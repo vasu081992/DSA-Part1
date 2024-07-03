@@ -1,26 +1,76 @@
 function Pattern14 (N) {
 
 
-for(i=1;i<=N;i++){
-  
-  let num=65;
+ 
 
-   let res=' ';
+  for(i=1;i<=N;i++){
 
-   // numbers 
- for(j=1;j<=i;j++){
+    let charCode = 65;
+    let res='';
 
-   res=res+' '+String.fromCharCode(num);
+    let char='A';
 
-    num++
- }
+    for(j=1;j<=i;j++){
 
- console.log(res)
+
+     res=res+' '+String.fromCharCode(charCode);
+
+     charCode=charCode+1;
+
 
     }
+
+console.log(res)
+  }
+
+
+
 
   } 
 
 
 
-  Pattern14(5)
+  Pattern14(6)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // for(i=1;i<=N;i++){
+  
+  //   let num=65;
+  
+  //    let res=' ';
+  
+  //    // numbers 
+  //  for(j=1;j<=i;j++){
+  
+  //    res=res+' '+String.fromCharCode(num);
+  
+  //     num++
+  //  }
+  
+  //  console.log(res)
+  
+  //     }
