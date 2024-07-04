@@ -75,7 +75,7 @@ console.log(res)
 
 }
 
-pattern19(3);
+pattern19(6);
 
 
 
