@@ -1,45 +1,69 @@
 function Pattern16 (N) {
+ 
+  let char='A';
+  let charCode = 65;
 
-  for(i=0;i<N;i++){
-    
-     let res=' ';
-  
-     //spaces 
-
-     for(j=0;j<N-i-1;j++){
-      res += ' ';
-
-     }
-     // alphabets 
-       let num=65;
-       let breakpoint = (2*i+1)/2
-      for(j=1;j<=2*i+1;j++){
-  
-     res=res+String.fromCharCode(num);  
-    
-     if(j<=breakpoint){
-      num++
-     }
-     else{
-      num--;
-     }
+  for(i=1;i<=N;i++){
 
 
-   }
-        //spaces 
+    let res='';
 
-        for(j=0;j<N-i-1;j++){
-          res += ' ';
-     
-        }
+   
 
-  
-   console.log(res)
-  
-      }
+    for(j=1;j<=i;j++){
+
+
+     res=res+' '+String.fromCharCode(charCode);
+
+
+    }
+
+    charCode=charCode+1;
+
+console.log(res)
+  }
+
+
+
+
+
   
     } 
   
   
-    Pattern16(5)
+    Pattern16(3)
   
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
