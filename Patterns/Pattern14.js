@@ -13,7 +13,7 @@ function Pattern14 (N) {
     for(j=1;j<=i;j++){
 
 
-     res=res+' '+String.fromCharCode(charCode);
+     res=res+String.fromCharCode(charCode);
 
      charCode=charCode+1;
 
