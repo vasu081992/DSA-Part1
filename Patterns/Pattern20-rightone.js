@@ -12,15 +12,11 @@ function pattern20(N) {
 
         res=res+'*'
       }
-
-      
       //space printing 
-
       for(j=1;j<=2*(i-N);j++){
-
         res=res+' ';
       }
-
+      
    //stars printing 
    for(j=i;j<=(2*N)-1;j++){
 
@@ -32,32 +28,21 @@ function pattern20(N) {
 
         res=res+'*'
       }
-
       //space printing 
-
       for(j=1;j<=2*(N-i);j++){
 
         res=res+' ';
       }
-
-
-
       //stars printing 
       for(j=1;j<=i;j++){
 
         res=res+'*'
       }
     }
-
     console.log(res)
-
 
       }
     
-
-
-
-
   }
 
 pattern20(6);

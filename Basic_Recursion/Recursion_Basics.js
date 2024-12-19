@@ -2,9 +2,10 @@
 
 
 let count=0;
+
 function Counter() {
 
-  if(count===50) return; // base condition to end the recursion 
+  if(count===51) return; // base condition to end the recursion 
 
 console.log(count);
 

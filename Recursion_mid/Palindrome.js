@@ -47,3 +47,86 @@ else{
 return true
 }
 console.log("optimized approach",Palindrome2("level,!--"))
+
+
+
+
+
+// //initial brute force tried nov29 2024
+
+
+
+// function palindrome(str){
+    
+//   str = str.toLowerCase() // important to make it small case initially
+//   let n=str.length;
+//   let j = n-1
+
+//   for(let i=0;i<n-1/2;i++){
+    
+//     if(str[i]!==str[j]){
+//             console.log(`${str} is not a palindrome`)
+//             return
+//     }
+//     j--;
+//   }
+//   console.log(`the string ${str} is a palindrome`)
+//   }
+  
+//   palindrome("Civic")
+
+
+//dec 2 palindrome brute force approach 
+
+
+function PalindromeBrute(str){
+
+  str=str.toLowerCase();
+
+  let n=str.length
+
+  let reversedString="";
+
+  for(i=0;i<n;i++){
+ 
+    reversedString = reversedString+str[n-i-1]
+
+  }
+
+  console.log(reversedString)
+  if(reversedString===str){
+    return true
+  }
+  else{
+     return false
+  }
+}
+
+console.log(PalindromeBrute("level"))
+
+
+//optimised palindome
+
+
+
+function PalindromeOptimised(str){
+
+   str=str.toLowerCase()
+
+  let n=str.length
+
+  for(i=0;i<Math.floor(n/2);i++){
+  
+    if(str[i]!==str[n-i-1]){
+      return false
+    }
+  }
+
+  return true
+
+}
+
+
+
+
+console.log(PalindromeOptimised("madam"))
