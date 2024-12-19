@@ -32,3 +32,27 @@ function InsertionSort2(arr){
 
 
  
+ function RecursiveInsertion(arr,i){
+
+  let  n=arr.length;
+
+  let j=i;
+ 
+  if(j>n-1) return;
+
+  while(j>0 && arr[j]<arr[j-1]){
+    let temp = arr[j];
+    arr[j]=arr[j-1]
+    arr[j-1]=temp;
+    j-- 
+  }
+
+  RecursiveInsertion(arr,i+1)
+
+ }
+
+ let arr=[9,8,7,6,99,63,20,58,77,1,63,3,2,1]
+
+ RecursiveInsertion(arr,0)
+
+ console.log('Post sort',arr)
