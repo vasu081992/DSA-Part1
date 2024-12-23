@@ -118,3 +118,89 @@ MergeSort(arr,0,arr.length-1)
 console.log('After sorting array',arr)
 
 
+
+
+
+
+//Merge sort - revision - dec21  sat
+
+
+
+function Merge2(arr1,low,mid,high){
+
+let temp = []
+
+let left = low;
+let right = mid+1;
+
+while(left<=mid && right<=high){
+
+
+if(arr1[left]<=arr1[right]){
+ 
+    temp.push(arr1[left])
+    left++
+}
+
+
+else { 
+
+    temp.push(arr1[right])
+    right++
+}
+
+
+}
+
+while(left<=mid){  //pushing remaining elems on left side
+    temp.push(arr1[left])
+    left++
+}
+
+while(right<=high){ //pushing remaining elems on right side
+    temp.push(arr1[right])
+    right++
+}
+
+
+for(i=low;i<=high;i++){
+    arr1[i]=temp[i-low]
+}
+
+
+}
+
+
+
+function MergeSort2(arr1,low,high){
+
+if(low>=high) return; // this means array is single elem array 
+
+
+let mid=Math.floor((low+high)/2)
+
+MergeSort2(arr1,low,mid) //for left side
+
+MergeSort2(arr1,mid+1,high) // for right side split 
+
+
+Merge2(arr1,low,mid,high)
+
+
+
+}
+
+
+
+
+let arr1 = [15,14,13,12]
+let n=arr1.length
+
+console.log('Array before sort',arr1)
+
+
+MergeSort2(arr1,0,n-1)
+
+console.log('Array post sort',arr1)
+
+
