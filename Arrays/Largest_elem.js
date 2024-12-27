@@ -43,30 +43,51 @@ let arr = [19,27,90,3,37,88,66,39,88,1000]
 console.log(LargestEleminArray(arr))
 
 
-//Recursive approach  - sc and tc same as above so we can avoid below method but good to know
+
+//largest elem- optimisied approach  - revision-dec27
 
 
 
-function largestElemRecusrive(arr,i,max){
+function LargestElem2(arr3){
+
+let n  = arr3.length 
+
+let max = arr3[0]
+
+for(i=0;i<arr3.length;i++)
+{
+  if(arr3[i]>max){
+    max=arr3[i]
+  }
+}
+return max
+}
 
 
-  let n=arr.length-1;
+let arr3=[10,12,128,18,18,21,25,36,96,33,74]
+
+console.log(LargestElem2(arr3))
 
 
-  if(i>n) return max;
- 
-    if(arr[i]>max){
-      max=arr[i]
-    }
+//above code has SC of O(1) and TC of O(n)
 
-  return largestElemRecusrive(arr,i+1,max)
+
+//non-optimised for largest elem - dec27
+
+
+
+function LargestElemBySorting(arr4){
+
+let n = arr4.length
+
+let sortedArray = arr4.sort((a,b)=>a-b)
+
+console.log('Max elem',sortedArray[n-1])
+
 
 }
 
-let arr1=[75,38,96,44,32,15,74,69,90,70]
-console.log(largestElemRecusrive(arr1,0,arr[0]))
 
-
-
-
+let arr4= [99,10,140,5,6,7,8,90,12,17]
+LargestElemBySorting(arr4)
 
