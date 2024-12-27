@@ -24,7 +24,7 @@ function Array_sorted_Brute(arr2){
 let arr2= [8,9,10,18,21,25,35,98,99,15]
 console.log(Array_Sorted(arr2))
 
-
+//TC and SC is O(N*N) AND O(1)
 
 
 
@@ -62,3 +62,4 @@ let arr = [8,9,10,18,21,25,35,98,99]
 console.log(Array_Sorted(arr))
 
 
+//TC and SC is O(N) AND O(1)
