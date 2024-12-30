@@ -63,3 +63,34 @@ console.log(Array_Sorted(arr))
 
 
 //TC and SC is O(N) AND O(1)
+
+
+
+
+
+//dec30 - check if array is sorted - brute force 
+
+
+
+
+function ArraySortBrute(arr5){
+
+  for(i=0;i<arr5.length;i++){
+    for(j=i+1;j<arr5.length;j++){
+      if(arr5[j]<arr5[i]){
+        continue;
+      }
+      else{
+        return false
+      }
+
+    }
+  }
+
+  return true
+
+}
+
+
+let arr5 = [7,3,4,6,9,10,12]
+console.log(ArraySortBrute(arr5))
