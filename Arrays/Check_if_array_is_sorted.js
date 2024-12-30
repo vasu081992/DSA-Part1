@@ -77,7 +77,7 @@ function ArraySortBrute(arr5){
 
   for(i=0;i<arr5.length;i++){
     for(j=i+1;j<arr5.length;j++){
-      if(arr5[j]<arr5[i]){
+      if(arr5[j]>arr5[i]){
         continue;
       }
       else{
@@ -92,5 +92,34 @@ function ArraySortBrute(arr5){
 }
 
 
-let arr5 = [7,3,4,6,9,10,12]
+let arr5 = [3,4,6,7,9,10,12]
 console.log(ArraySortBrute(arr5))
+
+
+
+
+//optimised code for array sort check 
+
+function ArraySortCheckOptimised(arr6){    
+
+  //let j=i+1;
+
+  for(let i=0;i<=arr6.length-2;i++){
+
+    if(arr6[i]<arr6[i+1]){
+       continue
+    }
+    else{
+      return false
+    }
+  }
+
+  return true
+
+}
+
+let arr6=[16,18,22,25,100,3]
+console.log(ArraySortCheckOptimised(arr6))
+
+
+
