@@ -70,5 +70,42 @@ function ArraySortCheck_Rotate(arr2){
 }
 
 
-let arr2 = [3,4,5,1,2,9]
+let arr2 = [9,10,11,5,6,6]
 console.log(ArraySortCheck_Rotate(arr2))
+
+
+
+
+
+//dec31-revision - array rotate and sort check 
+
+
+
+function Array_Rotate_Sort_Rotate(arr6){
+
+ let n=arr6.length;
+ let count=0;
+
+
+ for(i=0;i<n-1;i++){
+
+  let j=i+1;
+
+  if(arr6[i]>arr6[j]){
+    count++
+  }
+
+}
+
+  arr[n-1]>arr[0]&& count++;
+
+  return count<2 ? true:false
+
+ }
+
+
+
+
+let arr6=[7,8,9,5,6]
+
+console.log(Array_Rotate_Sort_Rotate(arr6))
