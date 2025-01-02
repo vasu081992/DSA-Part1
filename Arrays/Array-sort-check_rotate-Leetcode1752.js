@@ -109,3 +109,34 @@ function Array_Rotate_Sort_Rotate(arr6){
 let arr6=[7,8,9,5,6]
 
 console.log(Array_Rotate_Sort_Rotate(arr6))
+
+
+
+
+//jan2 - array rotate and sort check 
+
+
+
+function Rotate_Array_sort(arr10){
+
+  
+let n = arr10.length
+let count=0;
+
+for(i=0;i<n;i++){
+
+  if(arr10[i]>arr10[i+1]){
+    count++
+  }
+}
+
+
+arr10[n-1]>arr[0] && count++
+
+return count<2? true : false
+
+
+}
+
+let arr10=[4,5,6,2,3,9]
+console.log(Rotate_Array_sort(arr10))

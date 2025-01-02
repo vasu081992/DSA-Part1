@@ -145,3 +145,61 @@ for(i=0;i<n;i++){
 
 let arr4=[2,3,1,9,10,5,55,70,5,0.2,99]
 SecondLargest_and_smallest_Optimised(arr4)
+
+
+
+
+//jan2 2025 revision - second smallest and largest 
+
+
+
+function secondsmallest_SecondLargest(arr10){
+
+  let n = arr10.length; 
+
+  let largest = -Infinity
+  let smallest = Infinity
+
+
+  for(i=0;i<n;i++){
+   
+    if(arr10[i]<smallest){
+      smallest = arr10[i]
+    }
+
+    if(arr10[i]>largest){
+      largest=arr10[i]
+    }
+  }
+
+  let secondsmallest = Infinity
+  let secondlargest = -Infinity
+
+  for(i=0;i<n;i++){
+ 
+    if(arr10[i]<secondsmallest && arr10[i]!==smallest){
+
+    secondsmallest = arr10[i]
+
+    }
+    
+
+    if(arr10[i]>secondlargest && arr10[i]!==largest){
+
+    secondlargest = arr10[i]
+    
+    }
+    
+
+  }
+
+  console.log('Second smallest',secondsmallest)
+
+  console.log('Second largest',secondlargest)
+}
+
+
+let arr10 = [4,5,8,9,15,16,28,2,7,12,3]
+
+secondsmallest_SecondLargest(arr10)
+

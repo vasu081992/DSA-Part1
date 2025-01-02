@@ -18,25 +18,6 @@ let arr = [1,1,1,2,2,3,3]
 console.log(Remove_Duplicates(arr))
 
 
-//optimised approach - using two pointers
-
-
-function Remove_Duplicates_Optimised(arr2){
-
-  let i=0;
-  let count=0; 
-
-  for(j=i+1;j<arr2.length-1;j++){
-    if(arr2[i]===arr2[j]){
-      count++
-    }
-  }
-
-}
-
-
-let arr2=[1,1,1,2,2]
-console.log(Remove_Duplicates_Optimised(arr2))
 
 
 
@@ -69,3 +50,76 @@ console.log(Remove_Duplicates_Set_based(arr3))
 
 
 
+//optimised approach - using two pointers - dec31
+
+
+function Remove_Duplicates_Optimised(arr5){
+  let i = 0;
+  for (let j = 1; j < arr5.length; j++) {
+    if (arr5[i] !== arr5[j]) {
+      i++;
+      arr5[i] = arr5[j];
+    }
+  }
+  return i + 1;
+
+}
+
+
+let arr5=[1,1,1,2,2]
+console.log(Remove_Duplicates_Optimised(arr5))
+
+
+
+//jan 2 - removing duplicates in sorted array - brute force and optimised solution 
+
+
+
+
+function RemoveDuplicates_from_SortedArr(arr10){
+
+  let n = arr10.length; 
+
+ 
+  let set = new Set(arr10)
+
+  let UniqueArray= Array.from(set)
+
+  for(i=0;i<n;i++){
+    arr10[i]=UniqueArray[i]
+  }
+
+  return arr10
+
+
+}
+
+
+let arr10 = [1,1,2,2,3,3,3]
+console.log(RemoveDuplicates_from_SortedArr(arr10))
+
+//SC and TC of above code is O(n) since we use add. array and TC is O(n) + O(n)
+
+
+//jan 2 - removing duplicates in sorted array - optimised solution 
+
+
+
+function duplicates_removal(arr11){
+
+  let n = arr11.length;
+
+  let i=0;
+
+  for(j=i+1;j<n;j++){
+    if(arr11[i]!=arr11[j]){
+      i++;
+      arr11[i]=arr11[j]
+    }
+  }
+  return i+1
+}
+
+
+let arr11= [1,1,1,1,3,3,5,5,5,5]
+console.log(duplicates_removal(arr11))
