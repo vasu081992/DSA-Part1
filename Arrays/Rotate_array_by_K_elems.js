@@ -123,3 +123,45 @@ console.log(RotatetoRight(arr5,n,k1))
 
 
 
+//Recursive reversal - left rotation 
+
+
+
+function Reversal(arr10,start,end){
+
+
+  while(start<=end){
+    let temp=arr10[start]
+
+    arr10[start]=arr10[end]
+
+    arr10[end]=temp
+
+    start++
+    end--
+  }
+
+
+}
+
+
+
+function RotatetoLeft(arr10,n1,k2){
+
+  Reversal(arr10,0,k2-1)
+
+  Reversal(arr10,k2,n1-1)
+
+  Reversal(arr10,0,n1-1)
+
+  return arr10;
+  
+}
+
+
+
+let arr10 = [1,2,3,4,5,6,7]
+let n1 = arr10.length;
+let k2=2
+
+console.log(RotatetoLeft(arr10,n1,k2))
