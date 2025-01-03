@@ -24,3 +24,29 @@ console.log(LeftRotate(arr))
 //jan2 - left rotate array by one place - revision 
 
 
+
+
+
+function Left_Rotate_Array(arr10){
+
+let n = arr10.length; 
+let temp = arr10[0]
+
+for(i=1;i<n;i++){
+ 
+  arr10[i-1] = arr10[i]
+
+}
+
+arr10[n-1] = temp
+
+return arr10
+}
+
+
+let arr10 = [4,5,6,3,1]
+console.log(Left_Rotate_Array(arr10))
+
+//SC AND TC OF above code is O(1) and O(N) respectively
+
+

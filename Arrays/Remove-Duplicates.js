@@ -117,7 +117,14 @@ function duplicates_removal(arr11){
       arr11[i]=arr11[j]
     }
   }
+
+  console.log('Array without duplicates',arr11.slice(0,i+1))
+
+  console.log('Array size without dupicates',i+1)
+
   return i+1
+
+
 }
 
 
