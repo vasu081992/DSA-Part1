@@ -132,7 +132,12 @@ function MoveZeros_to_End(arr4){
     }
   }
 
-  if(j===-5 || j===n-1){
+  if(j===-5){
+    console.log('There is no zero in array')
+    return arr4
+  }
+
+  if(j===0 && arr4.every((val)=> val===0)){
     console.log('All elems of array are zero')
     return arr4
   }
@@ -150,5 +155,5 @@ function MoveZeros_to_End(arr4){
 
 }
 
-let arr4=[1,0,0,0,4,5,0,0]
+let arr4=[1,2,3,4]
 console.log(MoveZeros_to_End(arr4))
