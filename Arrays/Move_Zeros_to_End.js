@@ -77,8 +77,7 @@ function MoveZeros_Optimised(arr3){
 
   let n = arr3.length;
 
-   let j=-1; 
-
+   let j=-10; 
 
    //placing j in first zero th element 
 
@@ -92,7 +91,8 @@ function MoveZeros_Optimised(arr3){
    //if j is still -1 which means all elems are non-zero in array,
    //in this case we return the same array
 
-   if(j===-1){
+   if(j===-10){
+    console.log('Input array does not have zeros')
     return arr3;
    }
 
@@ -104,9 +104,50 @@ function MoveZeros_Optimised(arr3){
       j++
     }
    }
+
 return arr3
+
 }
 
 
-let arr3=[1,0,2,3,0,4,1,0]
+let arr3=[1,2,0,0,3,0,4,5]
 console.log(MoveZeros_Optimised(arr3))
+
+
+//optimised two pointer approach - revision - moving zeros to end 
+
+
+
+function MoveZeros_to_End(arr4){
+
+  let n =arr4.length; 
+
+  let j=-5; // some non positive number to keep track 
+
+
+  for(i=0;i<n;i++){
+    if(arr4[i]===0){
+      j=i;
+      break;
+    }
+  }
+
+  if(j===-5){
+    return arr4
+  }
+
+  for(i=j+1;i<n;i++){
+ 
+    if(arr4[i]!==0){
+      [arr4[i],arr4[j]] = [arr4[j],arr4[i]]
+      j++
+    }
+
+  }
+
+  return arr4
+
+}
+
+let arr4=[1,0,0,0,4,5,0,0]
+console.log(MoveZeros_to_End(arr4))
