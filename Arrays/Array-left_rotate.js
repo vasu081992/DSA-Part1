@@ -25,8 +25,6 @@ console.log(LeftRotate(arr))
 
 
 
-
-
 function Left_Rotate_Array(arr10){
 
 let n = arr10.length; 
