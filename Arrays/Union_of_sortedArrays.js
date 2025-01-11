@@ -130,6 +130,6 @@ return union
 
 let arr7=[1,4,7,9,11]
 
-let arr8 = [1,4,13]
+let arr8 = [1,4,13,15]
 
 console.log(Union_2_pointers(arr7,arr8))
