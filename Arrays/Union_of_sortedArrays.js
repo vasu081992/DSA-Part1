@@ -87,7 +87,7 @@ console.log(Union_using_Set(arr5,arr6))
 
 
 
-function Union_2_pointers(arr7,arr8){
+function Union_pointers(arr7,arr8){
 
   let i=0;
   let j=0;
@@ -97,24 +97,26 @@ while(i<arr7.length && j<arr8.length){
 
 
   if(arr7[i]<=arr8[j]){
-    if (union.length === 0 || union[union.length - 1] !== arr7[i])
+    if (union.length === 0 || union[union.length - 1] !== arr7[i]){
       union.push(arr7[i]);
+    }
     i++;
   } else{
-    if (union.length === 0 || union[union.length - 1] !== arr8[j])
+    if (union.length === 0 || union[union.length - 1] !== arr8[j]){
       union.push(arr8[j]);
+    }
     j++;
   }
   } 
   while(i<arr7.length){
-    if(union[union.length-1]!==arr7.length){
+    if(union[union.length-1]!==arr7[i]){
     union.push(arr7[i])
     i++
   }
 }
  
   while(j<arr8.length){
-    if(union[union.length-1]!==arr8.length){
+    if(union[union.length-1]!==arr8[j]){
     union.push(arr8[j])
     j++
   }
@@ -132,4 +134,4 @@ let arr7=[1,4,7,9,11]
 
 let arr8 = [1,4,13,15]
 
-console.log(Union_2_pointers(arr7,arr8))
+console.log(Union_pointers(arr7,arr8))
