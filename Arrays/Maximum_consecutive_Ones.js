@@ -19,6 +19,6 @@ function Max_Consecutive_Ones(arr1){
   }
   return temp;
 }
-let arr1 = [0,1,1,0,1,1,1,1,1,0,1,1,0,1,1,1,1,1,1,1,0,1,1]
+let arr1 = [0,0,0,1,1,1,5,1,1,1,1,0]
 
 console.log(Max_Consecutive_Ones(arr1))
