@@ -75,15 +75,21 @@ function Num_appearing_once_hashing(arr3){
  
   let n=arr3.length;
 
-  let max = 0;
+  let max = 0; // Initialize max to the smallest possible value
+
 
   //finding max elem of array used for creating a hash array
-
+ if(n===1){
+  return arr3[0]
+ }
+ else{
   for(let item of arr3){
     if(item>max){
       max=item
     }
+
   }
+
 
   let hash1= new Array(max+1).fill(0)
 
@@ -99,7 +105,7 @@ function Num_appearing_once_hashing(arr3){
       return arr3[i]
     }
   }
-
+ }
   
 }
 let arr3 = [11,11,11,12,13,13]
