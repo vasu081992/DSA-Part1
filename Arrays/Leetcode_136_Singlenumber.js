@@ -19,7 +19,7 @@ function Num_appearing_once_hashing(arr3){
     }
   }
 
-  const offset = Math.abs(min);
+  const offset = Math.abs(min); // this makes negative to positive number
 
   let hash1= new Array(max+offset+1).fill(0)
 
@@ -38,5 +38,5 @@ function Num_appearing_once_hashing(arr3){
  }
   
 }
-let arr3 = [11,11,11,12,13,13]
+let arr3 = [-1,,-2,-3,-1,-3]
 console.log(Num_appearing_once_hashing(arr3))
