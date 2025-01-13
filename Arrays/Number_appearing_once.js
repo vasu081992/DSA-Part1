@@ -4,8 +4,6 @@ function Counting_num(arr2){
 
   let n = arr2.length;
 
-
-
   for(i=0;i<n;i++){
 
     let count = 0; 

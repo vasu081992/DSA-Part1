@@ -134,3 +134,7 @@ console.log(SummationApproach(arr13,N4))
 
 
 //complexity here is SC is O(1) and TC here is 0(N)
+
+
+
+
