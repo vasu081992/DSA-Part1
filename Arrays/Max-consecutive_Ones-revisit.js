@@ -20,12 +20,13 @@ function Max_Consecutive_Ones(arr1){
       }
       count=0;
     }
-    
+    if(count>maxcount){
+      maxcount=count
+    }
   }
-
   return maxcount;
 
 }
 
-let arr1 = [1,1,1,0,1,1,0,1,1,1,1,0]
+let arr1 = [0,1,1,1,0,1,0,0,0]
 console.log(Max_Consecutive_Ones(arr1))
