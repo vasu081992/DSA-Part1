@@ -99,6 +99,7 @@ function Num_appearing_once_hashing(arr3){
     hash1[arr3[i]]++
   }
 
+  console.log(hash1)
 
   for(let i=0;i<arr3.length;i++){
     if(hash1[arr3[i]]===1){

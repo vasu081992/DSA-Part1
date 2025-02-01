@@ -26,9 +26,10 @@ function Num_appearing_once_hashing(arr3){
 
   
   for(let i=0;i<n;i++){
-    hash1[arr3[i]+offset]++
+    hash1[arr3[i]+offset]++;
   }
 
+  console.log(hash1)
 
   for(let i=0;i<arr3.length;i++){
     if(hash1[arr3[i]+offset]===1){
@@ -38,5 +39,5 @@ function Num_appearing_once_hashing(arr3){
  }
   
 }
-let arr3 = [-1,,-2,-3,-1,-3]
+let arr3 = [-1,-2,-3,-1,-3]
 console.log(Num_appearing_once_hashing(arr3))
