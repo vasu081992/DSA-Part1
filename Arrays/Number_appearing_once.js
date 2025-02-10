@@ -91,3 +91,47 @@ function FrequencyNum_Hashing(arr3){
 
 let arr3=[8,8,8,5,3,3,9,9]
 console.log(FrequencyNum_Hashing(arr3))
+
+
+//feb10 - Number appearing once using hashing technique  for non positive numbers
+
+
+
+
+function hashing_for_negativeNum(arr10){
+    
+  let n = arr10.length;
+
+  // Find the minimum and maximum element
+  let minVal = Math.min(...arr10);
+  let maxVal = Math.max(...arr10);
+  
+  console.log("Min:", minVal, "Max:", maxVal);
+
+  // Offset to shift negative values to positive indices
+  let offset = -minVal; // If minVal is -5, offset will be 5
+
+  console.log(offset)
+  // Declare hash array of size (max - min + 1)
+  let hashSize = maxVal - minVal + 1;
+  let hash = new Array(hashSize).fill(0);
+
+  // Hash the given array using shifted indices
+  for (let i = 0; i < n; i++) {
+      hash[arr10[i] + offset]++;
+  }
+
+  console.log("Hash:", hash);
+
+  // Find the first unique element
+  for (let i = 0; i < n; i++) {
+      if (hash[arr10[i] + offset] === 1) {
+          return arr10[i]; // Return first unique number
+      }
+  }
+
+  return null;
+}
+
+let arr10 = [-1,-1,-2]
+console.log(hashing_for_negativeNum(arr10))
