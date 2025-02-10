@@ -51,6 +51,7 @@ function LongestSubarray_2pointer(arr3,k1){
    let right=0;
    let sum = arr3[0]
    let maxLen=0;
+   let newVar
 
   while(right<n){
 // if sum > k, reduce the subarray from left
