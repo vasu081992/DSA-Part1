@@ -70,3 +70,5 @@ let arr2 = [2,3,5,2,2,1]
 let k2 = 5
 
 console.log(Subarray_count(arr2,k2))
+
+
