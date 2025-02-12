@@ -85,3 +85,7 @@ function LongestSubarray_2Pointer(arr2,k2){
 let arr2 = [4,4,4,12,2,2,2,2,2,2,6,6]
 let k2=12
 console.log(LongestSubarray_2Pointer(arr2,k2))
+
+
+//SC and TC of above code is O(1) and O(2*N) which is O(N)
+
